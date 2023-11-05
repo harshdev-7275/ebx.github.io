@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>EBX</title>
+  <style>
+    input[type=text] {
+      border-radius: 35px;
+    }
+
+    .form-group select {
+      border-radius: 35px;
+    }
+
+    input[type=date] {
+      border-radius: 35px;
+    }
+
+    button[type=submit] {
+      color: white;
+      background-color: black;
+      opacity: 0.8;
+      width: 70%;
+      border-radius: 35px;
+    }
+
+    body {
+      /* background:url("https://38.media.tumblr.com/d23deac40b06633b79520a8552f40b94/tumblr_nb1uhrRrge1st5lhmo1_1280.jpg") no-repeat center center fixed; */
+      background: url("images/sunset-ga9ff371cd_1920.jpg") no-repeat center center fixed;
+
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body::before {
+      z-index: -1;
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* IE Fallback */
+
+      background: rgba(214, 159, 214, 0.3);
+      width: 100%;
+      height: 100%;
+    }
+
+    fieldset {
+      /* border: 2px solid #000000;  */
+      width: 100%;
+      background: rgba(251, 255, 252, 0.3);
+      padding: 1%;
+    }
+
+    fieldset legend {
+      padding: 1%;
+      font-weight: bold;
+    }
+
+    .navbar a {
+      font-size: 120%;
+    }
+
+
+    legend {
+      color: rgba(0, 0, 0, 0.8);
+
+    }
+
+    .button:hover {
+      background-color: rgb(71, 32, 88, .4);
+      color: white;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <nav class="navbar  navbar-fixed-top navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="AutoTicket.html">AUTO RESOLUTION</a></li>
+
+          <li><a href="UserResolution.html">USER RESOLUTION</a></li>
+          <li><a href="PendingTicket.html">PENDING TICKET</a></li>
+          <li class="active"><a href="EBX.html">EBX</a></li>
+          <li><a href="NDC.html">NDC</a></li>
+          <li><a href="KnowledgeBase.html">KNOWLEDGE BASE</a></li>
+          <li><a href="Mi.html">MI</a></li>
+          <li><a href="TSDANC.html">TSDANC</a></li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <div class="container" style="margin-top:8%">
+    <br>
+    <br>
+    <form class="form-horizontal" name="form2">
+      <fieldset>
+        <legend>EBX</legend>
+
+
+        <div class="form-group">
+          <label class="control-label col-sm-3" for="actiontaken">Action Taken:</label>
+          <div class="col-sm-8">
+            <textarea rows="5" class="form-control" id="actiontaken"
+              placeholder="What really failed , what did we do, what is pending" name="actiontaken"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-3" for="siteCode">Pending With:</label>
+          <div class="col-sm-8">
+            <textarea rows="5" class="form-control" id="pending" placeholder="With whom it is pending"
+              name="pending"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-3" for="lastupdated">Last Updated on:</label>
+          <div class="col-sm-8">
+            <input type="date" id="lastupdated" name="lastupdated" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-3" for="nextactiondue">Next Action Due Date:</label>
+          <div class="col-sm-8">
+            <input type="date" id="nextactiondue" name="nextactiondue" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="control-label col-sm-3" for="tasknumber">Task Number:</label>
+          <div class="col-sm-8">
+            <input class="form-control" type="text" id="tasknumber" name="tasknumber">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-4 col-sm-7">
+            <button onClick="display(alert('RFU COPIED'));" type="submit" class="btn btn-default button" name="submit">submit</button>
+          </div>
+        </div>
+      </fieldset>
+  
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <script>
+      function display() {
+    var DispWin = window.open('', 'NewWin', 'toolbar=no,status=no,width=500,height=350');
+    var textArea = DispWin.document.createElement('textarea');
+    
+    
+    textArea.setAttribute("rows", "100"); 
+    textArea.setAttribute("cols", "100"); 
+
+    var message = "EBX\n";
+    message += "------------------\n";
+    
+    var data = document.getElementById('actiontaken').value;
+   
+    var regex = /[\r\n\x0B\x0C\u0085\u2028\u2029]+/g;
+    data = data.replace(regex, "\n");
+    message += "Action Taken:\n" + data;
+  
+
+    var pendingData = document.getElementById('pending').value;
+    var pendingRegex = /[\r\n\x0B\x0C\u0085\u2028\u2029]+/g;
+    pendingData = pendingData.replace(pendingRegex, "\n");
+    message += "\nPending With:\n" + pendingData;
+
+    message += "\nTask Number: " + document.form2.tasknumber.value;
+    console.log(message);
+    textArea.value = message;
+
+    var date1 = document.getElementById('lastupdated').value;
+    var date2 = document.getElementById('nextactiondue').value;
+
+    var dateArray1 = date1.split("-");
+    var dateFormat1 = dateArray1[1] + "-" + dateArray1[2] + "-" + dateArray1[0];
+
+    var dateArray2 = date2.split("-");
+    var dateFormat2 = dateArray2[1] + "-" + dateArray2[2] + "-" + dateArray2[0];
+
+    var dateformat = "Last Updated on: " + dateFormat1 + "\n";
+    dateformat += "Next Action Due Date: " + dateFormat2;
+    
+
+    textArea.value += "\n" + dateformat;
+    console.log("adada");
+
+   
+    DispWin.document.body.appendChild(textArea);
+
+
+        navigator.permissions.query({ name: "write-on-clipboard" }).then((result) => {
+  if (result.state == "granted" || result.state == "prompt") {
+    alert("Write access granted!");
+  }
+});
+    
+      navigator.clipboard.writeText(textArea.value)
+              .then(function() {
+                
+                console.log(textArea.value);
+                  alert("Copied the text: " + textArea.value);
+              })
+              .catch(function(err) {
+                  console.error('Unable to copy text: ', err);
+              });
+     
+            }
+      
+    </script>
+    <script>
+      var date = new Date();
+      var year = date.getFullYear();
+      var month = date.getMonth() + 1;
+      var todayDate = String(date.getDate()).padStart(2, '0');
+      var datePattern = year + '-' + month + '-' + todayDate;
+      document.getElementById("lastupdated").value = datePattern;
+    </script>
+</body>
+
+</html>
